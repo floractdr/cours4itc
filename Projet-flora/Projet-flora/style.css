@@ -1,0 +1,229 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+p {
+    display: inline-block;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+#main {
+    position: relative;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 12px;
+    background-color: black;
+}
+#main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0.25turn, white, black);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 60% 100%);
+}
+#main .section-container {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+}
+.bgc-1 {
+    background-color: blue;
+}
+.bgc-2 {
+    background-color: turquoise;
+}
+.c-1 {
+    color: turquoise;
+}
+.bgc-1, .bgc-2m .bgc-1 p, .bgc-2 p {
+    color: white;
+}
+
+/* DEBUT REGION
+* Première ligne
+*/
+    #main .section-container .row:first-of-type {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+    #main .section-container .row:first-of-type .column:first-of-type {
+        margin-right: 400px;
+    }
+    #main .section-container .row:first-of-type .column:first-of-type p {
+        padding: 15px 25px;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    #main .section-container .row:first-of-type .column:first-of-type .type-contrat {
+        font-weight: bold;
+    }
+    #main .section-container .row:first-of-type .column:last-of-type {
+        position: relative;
+        text-align: center;
+        padding: 20px 35px 10px 35px;
+    }
+    #main .section-container .row:first-of-type .column:last-of-type::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: blue;
+    }
+    #main .section-container .row:first-of-type .column:last-of-type p {
+        display: block;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #main .section-container .row:first-of-type .column:last-of-type img {
+        width: 46px;
+        height: 46px;
+    }
+/* Fin REGION
+* Première ligne
+*/
+
+/* DEBUT REGION
+* Deuxième ligne
+*/
+    #main .section-container #gallery.row {
+        display: flex;
+        overflow-x: scroll;
+        margin-bottom: 20px;
+    }
+    #main .section-container #gallery.row img {
+        max-height: 40vh;
+        min-width: calc((100% - 20px) / 3);
+        object-fit: cover;
+    }
+    #main .section-container #gallery.row img:not(:last-of-type) {
+        margin-right: 10px;
+    }
+/* Fin REGION
+* Deuxième ligne
+*/
+
+/* DEBUT REGION
+* Troisème ligne
+*/
+    #main .section-container #infos.row {
+        display: flex;
+        align-items: start;
+    }
+    #main .section-container #infos.row .column:first-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 55%;
+        padding-right: 2.5%;
+    }
+    #main .section-container #infos.row .column:first-of-type #ville {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+        padding: 30px 30px 30px 100px;
+        text-transform: uppercase;
+        color: turquoise;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+    #main .section-container #infos.row .column:first-of-type #ville::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 30px;
+        width: 40px;
+        height: 40px;
+        background: url("./assets/icones/home.png") no-repeat center center;
+        background-size: contain;
+    }
+    #main .section-container #infos.row .column:first-of-type #adresse {
+        margin-top: 20px;
+        padding: 30px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+    #main .section-container #infos.row .column:first-of-type #adresse span {
+        display: block;
+        text-transform: uppercase;
+    }
+    #main .section-container #infos.row .column:first-of-type::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background-color: lightgray;
+    }
+    #main .section-container #infos.row .column:last-of-type {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 40%;
+        padding-left: 2.5%;
+    }
+    #main .section-container #infos.row .column:last-of-type > div {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    #main .section-container #infos.row .column:last-of-type img {
+        width: 120px;
+        margin-left: 20px;
+    }
+    #main .section-container #infos.row .column:last-of-type p {
+        text-align: right;
+        display: block;
+    }
+    #main .section-container #infos.row .column:last-of-type #nom {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    #main .section-container #infos.row .column:last-of-type #tel {
+        position: relative;
+        padding-left: 60px;
+        color: turquoise;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    #main .section-container #infos.row .column:last-of-type #tel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100%;
+        background: url("./assets/icones/home.png") no-repeat center center;
+        background-size: contain;
+    }
+    #main .section-container #infos.row #prix {
+        display: flex;
+        align-items: center;
+        padding: 10px 40px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #main .section-container #infos.row #details {
+        width: 45%;
+        padding: 10px 50px;
+    }
+/* Fin REGION
+* Troisème ligne
+*/
